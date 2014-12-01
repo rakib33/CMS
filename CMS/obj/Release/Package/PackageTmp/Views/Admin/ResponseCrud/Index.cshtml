@@ -1,0 +1,65 @@
+﻿@model IEnumerable<CMS.Models.mcms_soap_response>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.mcms_soap_request.requestType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.responseType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.result)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.resultDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Log)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.mcms_soap_request.requestType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.responseType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.result)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.resultDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Log)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.ResponseId }) |
+                @Html.ActionLink("Details", "Details", new { id=item.ResponseId }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.ResponseId })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

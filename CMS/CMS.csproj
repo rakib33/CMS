@@ -1,0 +1,902 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{831D950C-587B-4E75-B973-2EF18BC34572}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CMS</RootNamespace>
+    <AssemblyName>CMS</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.DebuggerVisualizers, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\MySQL\MySQL Connector Net 6.9.4\Assemblies\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF5, Version=6.9.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\MySQL\MySQL Connector Net 6.9.4\Assemblies\v4.5\MySql.Data.Entity.EF5.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.9.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\MySQL\MySQL Connector Net 6.9.4\Assemblies\v4.5\MySql.Data.Entity.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="RazorEngine">
+      <HintPath>..\packages\RazorEngine.3.4.1\lib\net45\RazorEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <Private>True</Private>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.0.0\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.0.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.0.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.0.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.0.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.0.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code\CheckMsisdnUserStatus.cs" />
+    <Compile Include="App_Code\ConstantValues.cs" />
+    <Compile Include="App_Code\DirectoryManager.cs" />
+    <Compile Include="App_Code\IdentityManager.cs" />
+    <Compile Include="App_Code\Variables.cs" />
+    <Compile Include="Controllers\ContentChargeController.cs" />
+    <Compile Include="Controllers\OptionController.cs" />
+    <Compile Include="Controllers\RIP\UserAPIController.cs" />
+    <Compile Include="Controllers\SmsContentController.cs" />
+    <Compile Include="Controllers\SubscribeController.cs" />
+    <Compile Include="Models\cmsAuthentication.cs" />
+    <Compile Include="App_Code\CustomAuthorizeAttribute.cs" />
+    <Compile Include="App_Code\DBHandler.cs" />
+    <Compile Include="App_Code\MyViewEngine.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\Admin\ApplicationController.cs" />
+    <Compile Include="Controllers\Admin\AviContentdController.cs" />
+    <Compile Include="Controllers\Admin\LinksController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AdminViewModel.cs" />
+    <Compile Include="Models\Application.cs" />
+    <Compile Include="Models\AviContentd.cs" />
+    <Compile Include="Models\CSS.cs" />
+    <Compile Include="Models\Contentd.cs" />
+    <Compile Include="Models\Links.cs" />
+    <Compile Include="Models\Contentm.cs" />
+    <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\mcms_SubscriptionModel.cs" />
+    <Compile Include="Models\Tag.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\CSS\appValidation.css" />
+    <Content Include="Content\CSS\arrivostyle.css" />
+    <Content Include="Content\CSS\audioplayer.css" />
+    <Content Include="Content\CSS\rTable.css" />
+    <Content Include="Content\Images\button\btn_about.jpg" />
+    <Content Include="Content\Images\button\btn_contact.jpg" />
+    <Content Include="Content\Images\button\btn_disclaimer.jpg" />
+    <Content Include="Content\Images\button\btn_faq.jpg" />
+    <Content Include="Content\Images\button\btn_logout.jpg" />
+    <Content Include="Content\Images\button\btn_policy.jpg" />
+    <Content Include="Content\Images\button\btn_renew.jpg" />
+    <Content Include="Content\Images\button\btn_terms.jpg" />
+    <Content Include="Content\Images\button\btn_unsubscribe.jpg" />
+    <Content Include="Content\pdf\js\customview.js" />
+    <Content Include="Content\pdf\css\minimal.css" />
+    <Content Include="Scripts\audioplayer.js" />
+    <Content Include="Content\CSS\Dua.css" />
+    <Content Include="Content\CSS\jqm-demos.css" />
+    <Content Include="Content\CSS\jquery.css" />
+    <Content Include="Content\CSS\jquery.mobile-1.4.5.css" />
+    <Content Include="Content\CSS\mystyle.css" />
+    <Content Include="Content\CSS\Site.css" />
+    <Content Include="Content\Images\ajax-loader%281%29.gif" />
+    <Content Include="Content\Images\ajax-loader%282%29.gif" />
+    <Content Include="Content\Images\alpona.png" />
+    <Content Include="Content\Images\arrivo-logo.png" />
+    <Content Include="Content\Images\Arrivo.png" />
+    <Content Include="Content\Images\DuaImage\Tyamum-1.png" />
+    <Content Include="Content\Images\header.png" />
+    <Content Include="Content\Images\icons-png\action-black.png" />
+    <Content Include="Content\Images\icons-png\action-white.png" />
+    <Content Include="Content\Images\icons-png\alert-black.png" />
+    <Content Include="Content\Images\icons-png\alert-white.png" />
+    <Content Include="Content\Images\icons-png\arrow-d-black.png" />
+    <Content Include="Content\Images\icons-png\arrow-d-l-black.png" />
+    <Content Include="Content\Images\icons-png\arrow-d-l-white.png" />
+    <Content Include="Content\Images\icons-png\arrow-d-r-black.png" />
+    <Content Include="Content\Images\icons-png\arrow-d-r-white.png" />
+    <Content Include="Content\Images\icons-png\arrow-d-white.png" />
+    <Content Include="Content\Images\icons-png\arrow-l-black.png" />
+    <Content Include="Content\Images\icons-png\arrow-l-white.png" />
+    <Content Include="Content\Images\icons-png\arrow-r-black.png" />
+    <Content Include="Content\Images\icons-png\arrow-r-white.png" />
+    <Content Include="Content\Images\icons-png\arrow-u-black.png" />
+    <Content Include="Content\Images\icons-png\arrow-u-l-black.png" />
+    <Content Include="Content\Images\icons-png\arrow-u-l-white.png" />
+    <Content Include="Content\Images\icons-png\arrow-u-r-black.png" />
+    <Content Include="Content\Images\icons-png\arrow-u-r-white.png" />
+    <Content Include="Content\Images\icons-png\arrow-u-white.png" />
+    <Content Include="Content\Images\icons-png\audio-black.png" />
+    <Content Include="Content\Images\icons-png\audio-white.png" />
+    <Content Include="Content\Images\icons-png\back-black.png" />
+    <Content Include="Content\Images\icons-png\back-white.png" />
+    <Content Include="Content\Images\icons-png\bars-black.png" />
+    <Content Include="Content\Images\icons-png\bars-white.png" />
+    <Content Include="Content\Images\icons-png\bullets-black.png" />
+    <Content Include="Content\Images\icons-png\bullets-white.png" />
+    <Content Include="Content\Images\icons-png\calendar-black.png" />
+    <Content Include="Content\Images\icons-png\calendar-white.png" />
+    <Content Include="Content\Images\icons-png\camera-black.png" />
+    <Content Include="Content\Images\icons-png\camera-white.png" />
+    <Content Include="Content\Images\icons-png\carat-d-black.png" />
+    <Content Include="Content\Images\icons-png\carat-d-white.png" />
+    <Content Include="Content\Images\icons-png\carat-l-black.png" />
+    <Content Include="Content\Images\icons-png\carat-l-white.png" />
+    <Content Include="Content\Images\icons-png\carat-r-black.png" />
+    <Content Include="Content\Images\icons-png\carat-r-white.png" />
+    <Content Include="Content\Images\icons-png\carat-u-black.png" />
+    <Content Include="Content\Images\icons-png\carat-u-white.png" />
+    <Content Include="Content\Images\icons-png\check-black.png" />
+    <Content Include="Content\Images\icons-png\check-white.png" />
+    <Content Include="Content\Images\icons-png\clock-black.png" />
+    <Content Include="Content\Images\icons-png\clock-white.png" />
+    <Content Include="Content\Images\icons-png\cloud-black.png" />
+    <Content Include="Content\Images\icons-png\cloud-white.png" />
+    <Content Include="Content\Images\icons-png\comment-black.png" />
+    <Content Include="Content\Images\icons-png\comment-white.png" />
+    <Content Include="Content\Images\icons-png\delete-black.png" />
+    <Content Include="Content\Images\icons-png\delete-white.png" />
+    <Content Include="Content\Images\icons-png\edit-black.png" />
+    <Content Include="Content\Images\icons-png\edit-white.png" />
+    <Content Include="Content\Images\icons-png\eye-black.png" />
+    <Content Include="Content\Images\icons-png\eye-white.png" />
+    <Content Include="Content\Images\icons-png\forbidden-black.png" />
+    <Content Include="Content\Images\icons-png\forbidden-white.png" />
+    <Content Include="Content\Images\icons-png\forward-black.png" />
+    <Content Include="Content\Images\icons-png\forward-white.png" />
+    <Content Include="Content\Images\icons-png\gear-black.png" />
+    <Content Include="Content\Images\icons-png\gear-white.png" />
+    <Content Include="Content\Images\icons-png\grid-black.png" />
+    <Content Include="Content\Images\icons-png\grid-white.png" />
+    <Content Include="Content\Images\icons-png\heart-black.png" />
+    <Content Include="Content\Images\icons-png\heart-white.png" />
+    <Content Include="Content\Images\icons-png\home-black.png" />
+    <Content Include="Content\Images\icons-png\home-white.png" />
+    <Content Include="Content\Images\icons-png\info-black.png" />
+    <Content Include="Content\Images\icons-png\info-white.png" />
+    <Content Include="Content\Images\icons-png\location-black.png" />
+    <Content Include="Content\Images\icons-png\location-white.png" />
+    <Content Include="Content\Images\icons-png\lock-black.png" />
+    <Content Include="Content\Images\icons-png\lock-white.png" />
+    <Content Include="Content\Images\icons-png\mail-black.png" />
+    <Content Include="Content\Images\icons-png\mail-white.png" />
+    <Content Include="Content\Images\icons-png\minus-black.png" />
+    <Content Include="Content\Images\icons-png\minus-white.png" />
+    <Content Include="Content\Images\icons-png\navigation-black.png" />
+    <Content Include="Content\Images\icons-png\navigation-white.png" />
+    <Content Include="Content\Images\icons-png\phone-black.png" />
+    <Content Include="Content\Images\icons-png\phone-white.png" />
+    <Content Include="Content\Images\icons-png\plus-black.png" />
+    <Content Include="Content\Images\icons-png\plus-white.png" />
+    <Content Include="Content\Images\icons-png\power-black.png" />
+    <Content Include="Content\Images\icons-png\power-white.png" />
+    <Content Include="Content\Images\icons-png\recycle-black.png" />
+    <Content Include="Content\Images\icons-png\recycle-white.png" />
+    <Content Include="Content\Images\icons-png\refresh-black.png" />
+    <Content Include="Content\Images\icons-png\refresh-white.png" />
+    <Content Include="Content\Images\icons-png\search-black.png" />
+    <Content Include="Content\Images\icons-png\search-white.png" />
+    <Content Include="Content\Images\icons-png\shop-black.png" />
+    <Content Include="Content\Images\icons-png\shop-white.png" />
+    <Content Include="Content\Images\icons-png\star-black.png" />
+    <Content Include="Content\Images\icons-png\star-white.png" />
+    <Content Include="Content\Images\icons-png\tag-black.png" />
+    <Content Include="Content\Images\icons-png\tag-white.png" />
+    <Content Include="Content\Images\icons-png\user-black.png" />
+    <Content Include="Content\Images\icons-png\user-white.png" />
+    <Content Include="Content\Images\icons-png\video-black.png" />
+    <Content Include="Content\Images\icons-png\video-white.png" />
+    <Content Include="Content\Images\icons-svg\action-black.svg" />
+    <Content Include="Content\Images\icons-svg\action-white.svg" />
+    <Content Include="Content\Images\icons-svg\alert-black.svg" />
+    <Content Include="Content\Images\icons-svg\alert-white.svg" />
+    <Content Include="Content\Images\icons-svg\arrow-d-black.svg" />
+    <Content Include="Content\Images\icons-svg\arrow-d-l-black.svg" />
+    <Content Include="Content\Images\icons-svg\arrow-d-l-white.svg" />
+    <Content Include="Content\Images\icons-svg\arrow-d-r-black.svg" />
+    <Content Include="Content\Images\icons-svg\arrow-d-r-white.svg" />
+    <Content Include="Content\Images\icons-svg\arrow-d-white.svg" />
+    <Content Include="Content\Images\icons-svg\arrow-l-black.svg" />
+    <Content Include="Content\Images\icons-svg\arrow-l-white.svg" />
+    <Content Include="Content\Images\icons-svg\arrow-r-black.svg" />
+    <Content Include="Content\Images\icons-svg\arrow-r-white.svg" />
+    <Content Include="Content\Images\icons-svg\arrow-u-black.svg" />
+    <Content Include="Content\Images\icons-svg\arrow-u-l-black.svg" />
+    <Content Include="Content\Images\icons-svg\arrow-u-l-white.svg" />
+    <Content Include="Content\Images\icons-svg\arrow-u-r-black.svg" />
+    <Content Include="Content\Images\icons-svg\arrow-u-r-white.svg" />
+    <Content Include="Content\Images\icons-svg\arrow-u-white.svg" />
+    <Content Include="Content\Images\icons-svg\audio-black.svg" />
+    <Content Include="Content\Images\icons-svg\audio-white.svg" />
+    <Content Include="Content\Images\icons-svg\back-black.svg" />
+    <Content Include="Content\Images\icons-svg\back-white.svg" />
+    <Content Include="Content\Images\icons-svg\bars-black.svg" />
+    <Content Include="Content\Images\icons-svg\bars-white.svg" />
+    <Content Include="Content\Images\icons-svg\bullets-black.svg" />
+    <Content Include="Content\Images\icons-svg\bullets-white.svg" />
+    <Content Include="Content\Images\icons-svg\calendar-black.svg" />
+    <Content Include="Content\Images\icons-svg\calendar-white.svg" />
+    <Content Include="Content\Images\icons-svg\camera-black.svg" />
+    <Content Include="Content\Images\icons-svg\camera-white.svg" />
+    <Content Include="Content\Images\icons-svg\carat-d-black.svg" />
+    <Content Include="Content\Images\icons-svg\carat-d-white.svg" />
+    <Content Include="Content\Images\icons-svg\carat-l-black.svg" />
+    <Content Include="Content\Images\icons-svg\carat-l-white.svg" />
+    <Content Include="Content\Images\icons-svg\carat-r-black.svg" />
+    <Content Include="Content\Images\icons-svg\carat-r-white.svg" />
+    <Content Include="Content\Images\icons-svg\carat-u-black.svg" />
+    <Content Include="Content\Images\icons-svg\carat-u-white.svg" />
+    <Content Include="Content\Images\icons-svg\check-black.svg" />
+    <Content Include="Content\Images\icons-svg\check-white.svg" />
+    <Content Include="Content\Images\icons-svg\clock-black.svg" />
+    <Content Include="Content\Images\icons-svg\clock-white.svg" />
+    <Content Include="Content\Images\icons-svg\cloud-black.svg" />
+    <Content Include="Content\Images\icons-svg\cloud-white.svg" />
+    <Content Include="Content\Images\icons-svg\comment-black.svg" />
+    <Content Include="Content\Images\icons-svg\comment-white.svg" />
+    <Content Include="Content\Images\icons-svg\delete-black.svg" />
+    <Content Include="Content\Images\icons-svg\delete-white.svg" />
+    <Content Include="Content\Images\icons-svg\edit-black.svg" />
+    <Content Include="Content\Images\icons-svg\edit-white.svg" />
+    <Content Include="Content\Images\icons-svg\eye-black.svg" />
+    <Content Include="Content\Images\icons-svg\eye-white.svg" />
+    <Content Include="Content\Images\icons-svg\forbidden-black.svg" />
+    <Content Include="Content\Images\icons-svg\forbidden-white.svg" />
+    <Content Include="Content\Images\icons-svg\forward-black.svg" />
+    <Content Include="Content\Images\icons-svg\forward-white.svg" />
+    <Content Include="Content\Images\icons-svg\gear-black.svg" />
+    <Content Include="Content\Images\icons-svg\gear-white.svg" />
+    <Content Include="Content\Images\icons-svg\grid-black.svg" />
+    <Content Include="Content\Images\icons-svg\grid-white.svg" />
+    <Content Include="Content\Images\icons-svg\heart-black.svg" />
+    <Content Include="Content\Images\icons-svg\heart-white.svg" />
+    <Content Include="Content\Images\icons-svg\home-black.svg" />
+    <Content Include="Content\Images\icons-svg\home-white.svg" />
+    <Content Include="Content\Images\icons-svg\info-black.svg" />
+    <Content Include="Content\Images\icons-svg\info-white.svg" />
+    <Content Include="Content\Images\icons-svg\location-black.svg" />
+    <Content Include="Content\Images\icons-svg\location-white.svg" />
+    <Content Include="Content\Images\icons-svg\lock-black.svg" />
+    <Content Include="Content\Images\icons-svg\lock-white.svg" />
+    <Content Include="Content\Images\icons-svg\mail-black.svg" />
+    <Content Include="Content\Images\icons-svg\mail-white.svg" />
+    <Content Include="Content\Images\icons-svg\minus-black.svg" />
+    <Content Include="Content\Images\icons-svg\minus-white.svg" />
+    <Content Include="Content\Images\icons-svg\navigation-black.svg" />
+    <Content Include="Content\Images\icons-svg\navigation-white.svg" />
+    <Content Include="Content\Images\icons-svg\phone-black.svg" />
+    <Content Include="Content\Images\icons-svg\phone-white.svg" />
+    <Content Include="Content\Images\icons-svg\plus-black.svg" />
+    <Content Include="Content\Images\icons-svg\plus-white.svg" />
+    <Content Include="Content\Images\icons-svg\power-black.svg" />
+    <Content Include="Content\Images\icons-svg\power-white.svg" />
+    <Content Include="Content\Images\icons-svg\recycle-black.svg" />
+    <Content Include="Content\Images\icons-svg\recycle-white.svg" />
+    <Content Include="Content\Images\icons-svg\refresh-black.svg" />
+    <Content Include="Content\Images\icons-svg\refresh-white.svg" />
+    <Content Include="Content\Images\icons-svg\search-black.svg" />
+    <Content Include="Content\Images\icons-svg\search-white.svg" />
+    <Content Include="Content\Images\icons-svg\shop-black.svg" />
+    <Content Include="Content\Images\icons-svg\shop-white.svg" />
+    <Content Include="Content\Images\icons-svg\star-black.svg" />
+    <Content Include="Content\Images\icons-svg\star-white.svg" />
+    <Content Include="Content\Images\icons-svg\tag-black.svg" />
+    <Content Include="Content\Images\icons-svg\tag-white.svg" />
+    <Content Include="Content\Images\icons-svg\user-black.svg" />
+    <Content Include="Content\Images\icons-svg\user-white.svg" />
+    <Content Include="Content\Images\icons-svg\video-black.svg" />
+    <Content Include="Content\Images\icons-svg\video-white.svg" />
+    <Content Include="Content\Images\islamicpoth.png" />
+    <Content Include="Content\Images\loader.gif" />
+    <Content Include="Content\Images\Islamic-Poth-Logo.png" />
+    <Content Include="Content\Images\white.png" />
+    <Content Include="Content\pdf\css\images\annotation-check.svg" />
+    <Content Include="Content\pdf\css\images\annotation-comment.svg" />
+    <Content Include="Content\pdf\css\images\annotation-help.svg" />
+    <Content Include="Content\pdf\css\images\annotation-insert.svg" />
+    <Content Include="Content\pdf\css\images\annotation-key.svg" />
+    <Content Include="Content\pdf\css\images\annotation-newparagraph.svg" />
+    <Content Include="Content\pdf\css\images\annotation-noicon.svg" />
+    <Content Include="Content\pdf\css\images\annotation-note.svg" />
+    <Content Include="Content\pdf\css\images\annotation-paragraph.svg" />
+    <Content Include="Content\pdf\css\images\findbarButton-next%402x.png" />
+    <Content Include="Content\pdf\css\images\findbarButton-next-rtl%402x.png" />
+    <Content Include="Content\pdf\css\images\findbarButton-next-rtl.png" />
+    <Content Include="Content\pdf\css\images\findbarButton-next.png" />
+    <Content Include="Content\pdf\css\images\findbarButton-previous%402x.png" />
+    <Content Include="Content\pdf\css\images\findbarButton-previous-rtl%402x.png" />
+    <Content Include="Content\pdf\css\images\findbarButton-previous-rtl.png" />
+    <Content Include="Content\pdf\css\images\findbarButton-previous.png" />
+    <Content Include="Content\pdf\css\images\grab.cur" />
+    <Content Include="Content\pdf\css\images\grabbing.cur" />
+    <Content Include="Content\pdf\css\images\loading-icon.gif" />
+    <Content Include="Content\pdf\css\images\loading-small%402x.png" />
+    <Content Include="Content\pdf\css\images\loading-small.png" />
+    <Content Include="Content\pdf\css\images\secondaryToolbarButton-documentProperties%402x.png" />
+    <Content Include="Content\pdf\css\images\secondaryToolbarButton-documentProperties.png" />
+    <Content Include="Content\pdf\css\images\secondaryToolbarButton-firstPage%402x.png" />
+    <Content Include="Content\pdf\css\images\secondaryToolbarButton-firstPage.png" />
+    <Content Include="Content\pdf\css\images\secondaryToolbarButton-handTool%402x.png" />
+    <Content Include="Content\pdf\css\images\secondaryToolbarButton-handTool.png" />
+    <Content Include="Content\pdf\css\images\secondaryToolbarButton-lastPage%402x.png" />
+    <Content Include="Content\pdf\css\images\secondaryToolbarButton-lastPage.png" />
+    <Content Include="Content\pdf\css\images\secondaryToolbarButton-rotateCcw%402x.png" />
+    <Content Include="Content\pdf\css\images\secondaryToolbarButton-rotateCcw.png" />
+    <Content Include="Content\pdf\css\images\secondaryToolbarButton-rotateCw%402x.png" />
+    <Content Include="Content\pdf\css\images\secondaryToolbarButton-rotateCw.png" />
+    <Content Include="Content\pdf\css\images\shadow.png" />
+    <Content Include="Content\pdf\css\images\texture.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-bookmark%402x.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-bookmark.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-download%402x.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-download.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-menuArrows%402x.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-menuArrows.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-openFile%402x.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-openFile.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-pageDown%402x.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-pageDown-rtl%402x.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-pageDown-rtl.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-pageDown.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-pageUp%402x.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-pageUp-rtl%402x.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-pageUp-rtl.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-pageUp.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-presentationMode%402x.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-presentationMode.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-print%402x.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-print.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-search%402x.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-search.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-secondaryToolbarToggle%402x.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-secondaryToolbarToggle-rtl%402x.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-secondaryToolbarToggle-rtl.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-secondaryToolbarToggle.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-sidebarToggle%402x.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-sidebarToggle-rtl%402x.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-sidebarToggle-rtl.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-sidebarToggle.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-viewAttachments%402x.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-viewAttachments.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-viewOutline%402x.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-viewOutline-rtl%402x.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-viewOutline-rtl.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-viewOutline.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-viewThumbnail%402x.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-viewThumbnail.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-zoomIn%402x.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-zoomIn.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-zoomOut%402x.png" />
+    <Content Include="Content\pdf\css\images\toolbarButton-zoomOut.png" />
+    <Content Include="Content\pdf\css\viewer.css" />
+    <Content Include="Content\pdf\js\compatibility.js" />
+    <Content Include="Content\pdf\js\l10n.js" />
+    <Content Include="Content\pdf\js\pdf.js" />
+    <Content Include="Content\pdf\js\pdf.worker.js" />
+    <Content Include="Content\pdf\js\viewer.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Images\ajax-loader.gif" />
+    <Content Include="Content\Images\icons-18-black.png" />
+    <Content Include="Content\Images\icons-18-white.png" />
+    <Content Include="Content\Images\icons-36-black.png" />
+    <Content Include="Content\Images\icons-36-white.png" />
+    <Content Include="JQM\alpona.png" />
+    <Content Include="JQM\alpona1.png" />
+    <Content Include="JQM\alpona2.png" />
+    <Content Include="JQM\arrivo-logo.png" />
+    <Content Include="JQM\arrivo-logo1.png" />
+    <Content Include="JQM\arrivo-logo2.jpg" />
+    <Content Include="JQM\arrivo-logo2.png" />
+    <Content Include="JQM\header.png" />
+    <Content Include="JQM\header1.png" />
+    <Content Include="JQM\index.js" />
+    <Content Include="JQM\Islamic-poth-36.jpg" />
+    <Content Include="JQM\Islamic-Poth.png" />
+    <Content Include="JQM\Islamic-Poth_18x18.png" />
+    <Content Include="JQM\Islamic-Poth_36x36.png" />
+    <Content Include="JQM\islamicpoth.png" />
+    <Content Include="JQM\islamicpoth_old.png" />
+    <Content Include="JQM\jqm-demos.css" />
+    <Content Include="JQM\jquery.js" />
+    <Content Include="JQM\jquery.mobile-1.4.5.min.css" />
+    <Content Include="JQM\jquery.mobile-1.4.5.min.js" />
+    <Content Include="JQM\mystyle.css" />
+    <Content Include="Content\pdf\cmaps\78-EUC-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\78-EUC-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\78-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\78-RKSJ-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\78-RKSJ-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\78-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\78ms-RKSJ-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\78ms-RKSJ-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\83pv-RKSJ-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\90ms-RKSJ-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\90ms-RKSJ-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\90msp-RKSJ-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\90msp-RKSJ-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\90pv-RKSJ-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\90pv-RKSJ-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\Add-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\Add-RKSJ-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\Add-RKSJ-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\Add-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-CNS1-0.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-CNS1-1.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-CNS1-2.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-CNS1-3.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-CNS1-4.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-CNS1-5.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-CNS1-6.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-CNS1-UCS2.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-GB1-0.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-GB1-1.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-GB1-2.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-GB1-3.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-GB1-4.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-GB1-5.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-GB1-UCS2.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-Japan1-0.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-Japan1-1.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-Japan1-2.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-Japan1-3.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-Japan1-4.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-Japan1-5.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-Japan1-6.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-Japan1-UCS2.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-Korea1-0.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-Korea1-1.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-Korea1-2.bcmap" />
+    <Content Include="Content\pdf\cmaps\Adobe-Korea1-UCS2.bcmap" />
+    <Content Include="Content\pdf\cmaps\B5-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\B5-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\B5pc-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\B5pc-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\CNS-EUC-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\CNS-EUC-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\CNS1-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\CNS1-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\CNS2-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\CNS2-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\ETen-B5-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\ETen-B5-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\ETenms-B5-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\ETenms-B5-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\ETHK-B5-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\ETHK-B5-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\EUC-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\EUC-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\Ext-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\Ext-RKSJ-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\Ext-RKSJ-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\Ext-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\GB-EUC-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\GB-EUC-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\GB-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\GB-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\GBK-EUC-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\GBK-EUC-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\GBK2K-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\GBK2K-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\GBKp-EUC-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\GBKp-EUC-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\GBpc-EUC-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\GBpc-EUC-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\GBT-EUC-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\GBT-EUC-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\GBT-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\GBT-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\GBTpc-EUC-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\GBTpc-EUC-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\H.bcmap" />
+    <Content Include="Content\pdf\cmaps\Hankaku.bcmap" />
+    <Content Include="Content\pdf\cmaps\Hiragana.bcmap" />
+    <Content Include="Content\pdf\cmaps\HKdla-B5-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\HKdla-B5-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\HKdlb-B5-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\HKdlb-B5-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\HKgccs-B5-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\HKgccs-B5-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\HKm314-B5-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\HKm314-B5-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\HKm471-B5-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\HKm471-B5-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\HKscs-B5-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\HKscs-B5-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\Katakana.bcmap" />
+    <Content Include="Content\pdf\cmaps\KSC-EUC-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\KSC-EUC-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\KSC-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\KSC-Johab-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\KSC-Johab-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\KSC-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\KSCms-UHC-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\KSCms-UHC-HW-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\KSCms-UHC-HW-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\KSCms-UHC-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\KSCpc-EUC-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\KSCpc-EUC-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\LICENSE" />
+    <Content Include="Content\pdf\cmaps\NWP-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\NWP-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\RKSJ-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\RKSJ-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\Roman.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniCNS-UCS2-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniCNS-UCS2-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniCNS-UTF16-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniCNS-UTF16-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniCNS-UTF32-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniCNS-UTF32-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniCNS-UTF8-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniCNS-UTF8-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniGB-UCS2-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniGB-UCS2-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniGB-UTF16-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniGB-UTF16-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniGB-UTF32-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniGB-UTF32-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniGB-UTF8-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniGB-UTF8-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniJIS-UCS2-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniJIS-UCS2-HW-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniJIS-UCS2-HW-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniJIS-UCS2-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniJIS-UTF16-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniJIS-UTF16-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniJIS-UTF32-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniJIS-UTF32-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniJIS-UTF8-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniJIS-UTF8-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniJIS2004-UTF16-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniJIS2004-UTF16-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniJIS2004-UTF32-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniJIS2004-UTF32-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniJIS2004-UTF8-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniJIS2004-UTF8-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniJISPro-UCS2-HW-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniJISPro-UCS2-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniJISPro-UTF8-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniJISX0213-UTF32-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniJISX0213-UTF32-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniJISX02132004-UTF32-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniJISX02132004-UTF32-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniKS-UCS2-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniKS-UCS2-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniKS-UTF16-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniKS-UTF16-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniKS-UTF32-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniKS-UTF32-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniKS-UTF8-H.bcmap" />
+    <Content Include="Content\pdf\cmaps\UniKS-UTF8-V.bcmap" />
+    <Content Include="Content\pdf\cmaps\V.bcmap" />
+    <Content Include="Content\pdf\cmaps\WP-Symbol.bcmap" />
+    <None Include="Properties\PublishProfiles\IISHOst.pubxml" />
+    <Content Include="Scripts\Dua\jquery-2.1.0.js" />
+    <Content Include="Scripts\index.js" />
+    <Content Include="Scripts\jquery-1.11.1.min.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.mobile-1.4.5.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Admin\RequestCrud\SubscribeRequestResponse1.cshtml">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\MenuList.cshtml" />
+    <Content Include="Views\RIPView\ALQURAN\AlQURAN.cshtml" />
+    <Content Include="Views\RIPView\DUA\Dua.cshtml" />
+    <Content Include="Views\RIPView\FINDER%28QUBLA%29\FINDER%28QIBLA%29.cshtml" />
+    <Content Include="Views\RIPView\ISLAM-O-SUSASTHO\Islam_O_Susastho.cshtml" />
+    <Content Include="Views\RIPView\MONTH OF RAMDAN\Romjan.cshtml" />
+    <Content Include="Views\RIPView\NAMAJ\Namaj.cshtml" />
+    <Content Include="Views\RIPView\ZAKAT CALCULATOR\ZAKAT_CALCULATOR.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_ShareLayout.cshtml" />
+    <Content Include="Views\RIPView\ALQURAN\Suras.cshtml" />
+    <Content Include="Views\Shared\_HomeLayout.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Admin\Links\Create.cshtml" />
+    <Content Include="Views\Admin\Links\Delete.cshtml" />
+    <Content Include="Views\Admin\Links\Details.cshtml" />
+    <Content Include="Views\Admin\Links\Edit.cshtml" />
+    <Content Include="Views\Admin\Links\Index.cshtml" />
+    <Content Include="Views\Admin\AviContentd\Delete.cshtml" />
+    <Content Include="Views\Admin\AviContentd\Details.cshtml" />
+    <Content Include="Views\Admin\Application\Create.cshtml" />
+    <Content Include="Views\Admin\Application\Delete.cshtml" />
+    <Content Include="Views\Admin\Application\Details.cshtml" />
+    <Content Include="Views\Admin\Application\Edit.cshtml" />
+    <Content Include="Views\Admin\Application\Index.cshtml" />
+    <Content Include="Views\Admin\Contentd\Create.cshtml" />
+    <Content Include="Views\Admin\Contentd\Delete.cshtml" />
+    <Content Include="Views\Admin\Contentd\Details.cshtml" />
+    <Content Include="Views\Admin\Contentd\Edit.cshtml" />
+    <Content Include="Views\Admin\Contentd\Index.cshtml" />
+    <Content Include="Views\Admin\AviContentd\Create.cshtml" />
+    <Content Include="Views\Admin\AviContentd\Index.cshtml" />
+    <Content Include="Views\RolesAdmin\Create.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\Register1.cshtml" />
+    <Content Include="Views\Home\ControllerActionName.cshtml" />
+    <Content Include="Views\RolesAdmin\Index.cshtml" />
+    <Content Include="Views\RolesAdmin\Details.cshtml" />
+    <Content Include="Views\RolesAdmin\Edit.cshtml" />
+    <Content Include="Views\RolesAdmin\Delete.cshtml" />
+    <Content Include="Views\UserAdmin\Create.cshtml" />
+    <Content Include="Views\UserAdmin\Index.cshtml" />
+    <Content Include="Views\Admin\RequestCrud\Create.cshtml" />
+    <Content Include="Views\Admin\RequestCrud\Delete.cshtml" />
+    <Content Include="Views\Admin\RequestCrud\Details.cshtml" />
+    <Content Include="Views\Admin\RequestCrud\Edit.cshtml" />
+    <Content Include="Views\Admin\RequestCrud\Index.cshtml" />
+    <Content Include="Views\Admin\ResponseCrud\Create.cshtml" />
+    <Content Include="Views\Admin\ResponseCrud\Delete.cshtml" />
+    <Content Include="Views\Admin\ResponseCrud\Details.cshtml" />
+    <Content Include="Views\Admin\ResponseCrud\Edit.cshtml" />
+    <Content Include="Views\Admin\ResponseCrud\Index.cshtml" />
+    <Content Include="Views\Subscribe\SubscribeUser.cshtml" />
+    <Content Include="Views\Subscribe\HeaderError.cshtml" />
+    <Content Include="Views\Subscribe\SubscribeSucess.cshtml" />
+    <Content Include="Views\Subscribe\SubscribeUnSucess.cshtml" />
+    <Content Include="Views\Subscribe\Subscribe.cshtml" />
+    <Content Include="Views\Subscribe\UnSubscribe.cshtml" />
+    <Content Include="Views\Subscribe\UnSubscribeSucess.cshtml" />
+    <Content Include="Views\Subscribe\UnSubscribeFailed.cshtml" />
+    <Content Include="Views\RIPView\E-BOOK\EBook.cshtml" />
+    <Content Include="Views\RIPView\HOW TO\howto.cshtml" />
+    <Content Include="Views\RIPView\HAJJ\Hajj.cshtml" />
+    <Content Include="Views\Admin\AviContentd\Edit.cshtml" />
+    <Content Include="Views\RIPView\E-BOOK\B_EBook.cshtml" />
+    <Content Include="Views\RIPView\Option\Contact.cshtml" />
+    <Content Include="Views\RIPView\Option\FAQ.cshtml" />
+    <Content Include="Views\RIPView\Option\Disclaimer.cshtml" />
+    <Content Include="Views\RIPView\Option\Policy.cshtml" />
+    <Content Include="Views\RIPView\Option\Terms.cshtml" />
+    <Content Include="Views\RIPView\Option\About.cshtml" />
+    <Content Include="Views\Subscribe\LoginError.cshtml" />
+    <Content Include="Views\Home\Settings.cshtml" />
+    <Content Include="Views\Subscribe\LoginFailed.cshtml" />
+    <Content Include="Views\Subscribe\DeviceSubscribe.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>15816</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:15381/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,33 @@
+﻿@{
+    //Layout = null;
+    Layout = "~/Views/Shared/_ShareLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SubcribeSucess</title>
+</head>
+<body>
+    <div style="text-align:center">
+
+        <table style="margin:auto">
+            <tr>
+                <td style="background-color:#fbf6f6;height:70px;width:400px;color:red">
+                    <b>Thank you for your subscription.</b><br /><br />
+                    <b>Confirmation sms has been sent to your </b><br />
+                    <b>number.</b>
+                </td>
+            </tr>
+            <tr>
+                <td style="background-color: #fbf6f6;color:#808080;text-align:center;height:70px;width:400px">
+                    <b>Your service will be valid till @ViewBag.Date</b>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+</html>

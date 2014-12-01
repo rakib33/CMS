@@ -1,0 +1,118 @@
+table{
+	width: 100%;
+	max-width: 700px;
+	margin: 0 auto;
+	color: #0b0b0b;
+	text-align: left;
+	border-spacing: 0;
+
+}
+tr td{
+	padding: 5px 10px;
+	margin: 0;
+}
+@font-face {
+    font-family: myArbiFont;
+    src: url(UthmanTN1Ver10.otf);
+}
+.tHeader, .tHeaderC{
+	color: #008b00;
+	font-size: 30px;
+	border: 0px;
+}
+.suraHeader{
+	background-image: url(suraHeader.jpg);
+	background-position: center top;
+	background-repeat: no-repeat;
+	text-align: center;
+	color: white;
+	border-radius: 25px;
+	padding: 12px 0;
+}
+.subHeader, .subHeader2, .subHeaderC{
+	color: #008b00;
+	font-size: 22px;
+	border: 0px;
+	/*padding-top: 10px;*/
+}
+.subHeader2, .sub2W{
+	font-size: 18px;
+}
+.description, .desGL	{
+	text-indent: 50px;
+	text-align: justify;
+	border: 0px;
+}
+.arbi, .aWr{
+	/*padding: 3px 25px 0 25px;*/
+	font-family: myArbiFont;
+	font-size: 1.7em;
+	text-align: right;
+	background-color: #EEE8AA;
+	border: 1px solid #837A14;
+	border-bottom: 0px;
+	border-radius: 25px 25px 0 0;
+
+
+}
+.tLit{
+	/*padding: 0 25px 0 25px;*/
+	font-style: oblique;
+	border: 1px solid #837A14;
+	background-color: #F2E882;
+	border-top: 0px;
+	border-bottom: 0px;
+}
+.tLay, .tLWr{
+	/*padding: 0 25px 0 25px;*/
+	font-weight: bold;
+	border: 1px solid #837A14;
+	background-color: #DBD161;
+	border-top: 0px;
+	border-radius: 0 0 25px 25px;
+}
+.tQuote, .tQtGR{
+	color: #6098CF;
+	font-weight: bold;
+	font-style: oblique;
+	text-align: center;
+	border: 0px;
+}
+.tList{
+	/*text-indent: 50px;*/
+
+	border: 0px;
+	padding: 3px 0px 0px 0px;
+	/*padding-left: 10px;*/
+}
+
+.iImage {
+	margin-top: 20px;
+	text-align: center;
+	text-indent: 0px;
+	border: 2px solid #afeded;
+	border-bottom: 0px;
+	border-radius: 25px 25px 0px 0px;
+}
+.iImageText{
+	border: 2px solid #afeded;
+	border-radius: 0px 0px 25px 25px;
+	text-align: center;
+}
+.goLeft, .desGL{
+	text-align: left;
+}
+.goCenter, .tHeaderC, .subHeaderC{
+	text-align: center;
+}
+.goRight, .tQtGR{
+	text-align: right;
+}
+.gapTd{
+	border: 0px;
+	margin: 0px;
+}
+.wrong, .sub2W, .aWr, .tLWr{
+	color: red;
+	font-weight: bold;
+}

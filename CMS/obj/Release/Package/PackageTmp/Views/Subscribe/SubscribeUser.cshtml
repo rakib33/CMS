@@ -1,0 +1,59 @@
+﻿@model CMS.Models.mcmsSubscribePhone
+@{
+    Layout = "~/Views/Shared/_ShareLayout.cshtml";
+    
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SubscribePhone</title>
+</head>
+<body>
+    @using (Html.BeginForm("SubscribeUser", "Subscribe", FormMethod.Post,
+    new { enctype = "multipart/form-data" }))
+    {
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary(true)
+        <div style="text-align:center">
+            <table style="max-width:500px;margin:auto">
+                <tr>
+                    <td colspan="2" style="text-align:left;font-size:medium;color:red;">
+                        Subscribe
+                    </td>
+                </tr>
+                <tr style="background-color:#f1ebeb">
+                    <th colspan="2">
+                        <p>
+                            Please Ensert Your Phone Number
+                        </p>
+                        <p>
+                            @Html.TextBoxFor(model => model.PhoneCode, new { VALUE = "+88018", @readonly = "readonly", style = "border:none;width:50px;text-align: left;background-color:#f1ebeb;" })   @*value = @Model.RIF,*@
+                            @Html.TextBoxFor(model => model.Phone, new { VALUE = "xxxxxxx" })
+                            <br />
+                            @Html.ValidationMessageFor(model => model.Phone)
+                        </p>
+                    </th>
+                </tr>
+
+                <tr style="background-color:#f1ebeb;">
+                    <td colspan="2">
+                        You will receive a sms notification.
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color:#c61313;width:200px;">
+
+                        <a href="" style="text-decoration: none !important; padding: .3em; color:#fff; ">Cencel</a>
+                    </td>
+                    <td style="background-color:#c61313;width:200px;">
+                        <input style="background-color: #c61313; width: 100%; border: none; color: #fff;" type="submit" value="Next" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    }
+</body>
+</html>

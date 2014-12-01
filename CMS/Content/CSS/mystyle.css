@@ -1,0 +1,76 @@
+body{
+    
+}
+.ui-btn{
+    margin: 0px 0px;
+    position: 2px;
+}
+.ui-btn-icon-notext,
+.ui-header button.ui-btn.ui-btn-icon-notext,
+.ui-footer button.ui-btn.ui-btn-icon-notext {
+    padding: 0;
+    position:absolute;
+    width: 30px;
+    height: 30px;
+    text-indent: -9999px;
+    white-space: nowrap !important;
+}
+
+
+.ui-btn-icon-left:after,
+.ui-btn-icon-right:after,
+.ui-btn-icon-top:after,
+.ui-btn-icon-bottom:after,
+.ui-btn-icon-notext:after {
+    content: "";
+    position: absolute;
+
+}
+.ui-icon{
+    width:22px;
+    height:22px;
+}
+.ui-icon-myapp-settings {
+	background: url("../Images/islamicpoth.png") no-repeat rgba(0, 0, 0, 0.4) !important;
+	background-color: transparent !important;
+    background-size: 20px 20px;
+    border: 0 !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+
+}
+.footer{
+	padding: 0;
+	margin: 0;
+}
+#popupPanel-popup {
+	right: auto !important;
+    left: 0 !important;    
+}
+#popupPanel {
+    width: 100%;
+    border: 1px solid #000;
+    border-right: none;
+    background: rgba(0,0,0,.5);
+    margin: -1px 0;
+}
+#popupPanel .ui-btn {
+    margin: .7em 15px;
+    border-radius: 1.4em;
+}
+.ui-header{
+    padding-top: 2px;
+    padding-bottom: 0px;
+    border: 0;
+    background-color: #ea2227;
+    text-align: center;
+}
+.ui-footer {
+    max-height: 30px;
+    padding: 0px;
+    background-color: #ea2227;
+}
+.ui-li-count {
+    -webkit-border-radius: 1.4em /*{global-radii-buttons}*/;
+    border-radius: 1.4em /*{global-radii-buttons}*/;
+}

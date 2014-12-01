@@ -1,0 +1,51 @@
+﻿@model CMS.Models.AviContentd
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Upload</title>
+</head>
+<body>
+    <div>
+
+   @using (Html.BeginForm("Create", "AviContentd", FormMethod.Post,
+    new { enctype = "multipart/form-data" }))
+        {
+    @Html.AntiForgeryToken()
+
+    <fieldset>
+        <div class="form-horizontal">
+            <h4>AviContentd</h4>
+            <hr />
+            @Html.ValidationSummary(true)
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.MID, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.MID)
+                    @Html.ValidationMessageFor(model => model.MID)
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.AVIContent, new { @class = "control-label col-md-2" })                          
+                <div class="editor-field">
+                    @Html.TextBox("file", "", new { type = "file" })
+                    @Html.ValidationMessageFor(model => model.AVIContent)
+                </div>
+            </div>
+                <div class="editor-field">
+                    <input type="submit" value="Upload" />
+                </div>
+    </fieldset>
+        }
+
+    </div>
+</body>
+</html>

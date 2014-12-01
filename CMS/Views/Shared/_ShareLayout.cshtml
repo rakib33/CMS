@@ -1,0 +1,60 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Robi Islamic Path</title>
+    
+    <script src="~/Scripts/jquery.js"></script>
+    @*<script src="~/Scripts/index.js"></script>*@
+    <script src="~/Scripts/jquery.mobile-1.4.5.min.js"></script>
+
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+  
+    <link href="~/Content/CSS/jquery.mobile-1.4.5.css" rel="stylesheet" />
+    <link href="~/Content/CSS/jqm-demos.css" rel="stylesheet" />
+    <link href="~/Content/CSS/mystyle.css" rel="stylesheet" />
+
+      @*rTable.css for sura page*@ 
+    
+   
+  
+    
+</head>
+<body>
+      
+    <div data-role="page" class="jqm-demos" data-quicklinks="false">
+
+        <!-- header -->
+        <div data-role="header" data-position="fixed" data-theme="f" data-tap-toggle="false">
+            <a href="~/home/index" data-role="button" class="ui-btn ui-btn-left ui-alt-icon ui-nodisc-icon ui-corner-all ui-btn-icon-notext ui-icon-myapp-settings">Back</a>
+            <img src="~/Content/Images/header.png" style="max-height:30px;">
+
+            @*<div class="headerright">
+                @Html.Partial("_LoginPartial")
+            </div>*@
+        </div>
+        <!-- /header -->
+
+        <!-- content -->
+        <div role="main" class="ui-content jqm-content jqm-fullwidth">
+            @RenderBody()
+        </div><!-- /content -->
+
+
+        <div id="footerDiv" data-role="footer" data-position="fixed" style="background-color: #ea2227;" data-tap-toggle="false">
+
+            <div style="width: 50%; float:left">
+                <img src="~/Content/Images/alpona.png" style="max-height:30px;">
+            </div>
+
+            <div style="width: auto; float:right">
+                <img src="~/Content/Images/arrivo-logo.png" style="max-height:30px;">
+            </div>
+        </div><!-- /jqm-footer -->
+
+    </div>
+  
+</body>
+</html>

@@ -1,0 +1,77 @@
+﻿@model IEnumerable<CMS.Models.Content_m_d>
+@{
+    if (ViewBag.Device =="android")
+    {
+        Layout = null;
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_ShareLayout.cshtml";
+    }
+    var tr_class = "";
+    var thclass = "";
+    var check = 0;
+}
+
+
+
+<link href="~/Content/CSS/Dua.css" rel="stylesheet" />
+
+    <table class="Duatable">
+
+        @foreach (var item in Model)
+        {
+           
+            
+            if (item.Group_Id > 0)
+            {
+                  if(item.Group_Id>check)
+                    { 
+                    thclass = "cat" + item.Group_Id + " th2";
+                    tr_class = "cat" + item.Group_Id;
+              
+                    <tr class="toggler" data-prod-cat="@item.Group_Id">
+                        <th class="Duath" style="color:#ffffff">
+                          <a class="@item.ClassName" href="#">@item.Content</a>
+                        </th>    
+            
+                        <th class="@thclass">+</th>
+                        <th class="@thclass" style="display:none">-</th>
+                    </tr>
+                        check = item.Group_Id;
+                    }
+                    else
+                    { 
+                         <tr class="@tr_class" style="display:none">
+                            <td class="@item.ClassName">
+                                  @item.Content
+                            </td>
+                        </tr>           
+                    
+                    }
+                }                   
+                   else
+            { 
+              <tr>
+                  <td>
+                      <h1 class="Duah1">@item.Content</h1>   @*@ViewBag.Header*@
+                  </td>
+              </tr>
+            }       
+
+            }
+            
+        
+
+    </table>
+<script src="~/Scripts/jquery-1.11.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".toggler").click(function (e) {
+            e.preventDefault();
+            $('.cat' + $(this).attr('data-prod-cat')).toggle();
+        });
+    });
+</script>
+
+

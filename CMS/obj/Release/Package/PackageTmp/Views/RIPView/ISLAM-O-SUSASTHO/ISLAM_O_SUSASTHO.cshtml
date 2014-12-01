@@ -1,0 +1,40 @@
+﻿
+@model IEnumerable<CMS.Models.Content_m_d>
+
+@{
+    // ViewBag.Header = ViewBag.SuraName;
+    if (ViewBag.Device != null)
+    {
+        Layout = null;
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_ShareLayout.cshtml";
+    }
+}
+
+<link href="~/Content/CSS/rTable.css" rel="stylesheet" />
+
+<table class="">
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td class="@item.ClassName">
+
+                @if (item.aud_ved_img != 0)
+                {
+                    <img src="@Url.Action("PlayAudio", "Home", new { id =item.aud_ved_img })" />
+                   
+                }
+                else
+                {
+                    @Html.DisplayFor(modelItem => item.Content)
+                }
+            </td>
+
+        </tr>
+    }
+
+</table>

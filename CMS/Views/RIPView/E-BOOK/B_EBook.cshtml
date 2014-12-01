@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Islamic Book Gallery</title>
+  
+    <link href="~/Content/pdf/css/minimal.css" rel="stylesheet" />
+   
+    <script type="text/javascript">
+        var url = '@Url.Action("PlayAudio", "Home", new { id = ViewBag.ID })';
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav1">
+            <button id="prev" onclick="goPrevious()" class="button">Previous</button>
+            <span class="pNum">Page: <span id="page_num"></span> / <span id="page_count"></span></span>
+            <button id="next" onclick="goNext()" class="button">Next</button>
+        </div>
+        <canvas width=1100 height=850 class="canvas" id="the-canvas"></canvas>
+    </div>
+
+    <script src="~/Content/pdf/js/pdf.js"></script>
+    <script src="~/Content/pdf/js/customview.js"></script>
+  
+</body>
+</html>

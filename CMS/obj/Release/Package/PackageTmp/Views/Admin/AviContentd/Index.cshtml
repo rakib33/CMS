@@ -1,0 +1,127 @@
+﻿@model IEnumerable<CMS.Models.AviContentView>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    @*<script src="~/Scripts/jquery-1.7.2.min.js"></script>
+    <script src="~/Scripts/jquery.jplayer.min.js"></script>
+    <link href="~/Content/CSS/jplayer.pink.flag.css" rel="stylesheet" />
+    
+<script type="text/javascript">
+
+    $(document).ready(function () {
+    $("#jquery_jplayer_1").jPlayer({                            //jquery_jplayer_1
+    ready: function () {
+    $(this).jPlayer("setMedia", {
+    title: "Bubble",
+    m4a: "/AviContentd/PlayAudio/1"
+    });
+    },
+    //play: function() { // To avoid multiple jPlayers playing together.
+    //$(this).jPlayer("pauseOthers");
+    //},
+    swfPath: "/js",
+    supplied: "m4a, oga"
+    });
+    });
+   
+
+    $(document).ready(function () {
+        $("#jquery_jplayer_3").jPlayer({                            //jquery_jplayer_1
+            ready: function () {
+                $(this).jPlayer("setMedia", {
+                    title: "Bubble",
+                    m4a: "/AviContentd/PlayAudio/3"
+                });
+            },
+            //play: function () { // To avoid multiple jPlayers playing together.
+            //    $(this).jPlayer("pauseOthers");
+            //},
+            swfPath: "/js",
+            supplied: "m4a, oga"
+        });
+    });
+
+
+ </script>*@
+ 
+ 
+
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+
+    <table>
+
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MID)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.ContentType)
+            </th>
+            <th>
+                Play
+            </th>
+        </tr>
+
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem =>item.MID )
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.ContentType)
+                </td>
+                <td>
+                    @{
+                       if (item.ContentType == ".mp3")
+                       { 
+                        @*<audio controls="controls">
+                            <source src="@Url.Action("PlayAudio", new { id = item.ID })" type="audio/mpeg" />
+                        </audio>*@
+                       }
+                       else if (item.ContentType == ".jpg" || item.ContentType == ".png")
+                       {
+                        <img height="50" width="50" src="@Url.Action("PlayAudio", new { id = item.ID })" />
+                       }
+}
+                </td>
+                <td></td>
+
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+
+    </table>
+
+
+   
+        
+
+</body>
+</html>

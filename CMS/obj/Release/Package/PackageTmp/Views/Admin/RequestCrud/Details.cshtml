@@ -1,0 +1,154 @@
+﻿@model CMS.Models.mcms_soap_request
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>mcms_soap_request</h4>
+    	<hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.requestType)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.requestType)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.spId)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.spId)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.spPassword)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.spPassword)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.timeStamp)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.timeStamp)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.userID)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.userID)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.userType)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.userType)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.operCode)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.operCode)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.productID)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.productID)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.isAutoExtend)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.isAutoExtend)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.channelID)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.channelID)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.extensionInfo)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.extensionInfo)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.requestLog)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.requestLog)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.responseLog)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.responseLog)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.result)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.result)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.resultDescription)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.resultDescription)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.msisdn)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.msisdn)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

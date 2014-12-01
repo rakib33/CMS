@@ -1,0 +1,113 @@
+﻿@model CMS.Models.Links
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+    @using (Html.BeginForm()) 
+    {
+        @Html.AntiForgeryToken()
+        
+        <div class="form-horizontal" style="width:50%;margin-left:20%">
+            <h4>Links</h4>
+            <hr />
+            @Html.ValidationSummary(true)
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.AID, new { @class = "control-label col-md-2" })
+                <div >
+                   
+                    @Html.DropDownList("AID", (SelectList)ViewBag.AID, "--Select Item---", new { style = "width:310px" })
+                   @Html.ValidationMessageFor(model => model.AID)
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Name)
+                    @Html.ValidationMessageFor(model => model.Name)
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.SQID, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.SQID)
+                    @Html.ValidationMessageFor(model => model.SQID)
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Parent, new { @class = "control-label col-md-2" })
+                <div>
+                   
+                    @Html.DropDownList("Parent", ViewData["Links"] as IEnumerable<SelectListItem>, new { style = "width:310px" })
+
+                    @Html.ValidationMessageFor(model => model.Parent)
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.URL, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.URL)
+                    @Html.ValidationMessageFor(model => model.URL)
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.IMG_Path, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.IMG_Path)
+                    @Html.ValidationMessageFor(model => model.IMG_Path)
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.IsParent, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.IsParent)
+                    @Html.ValidationMessageFor(model => model.IsParent)
+                </div>
+            </div>
+    
+            <div class="form-group">
+                @Html.LabelFor(model => model.Frame, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Frame)
+                    @Html.ValidationMessageFor(model => model.Frame)
+                </div>
+            </div>
+    
+            
+            <div class="form-group">
+                @Html.LabelFor(model => model.IsActive, new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.IsActive)
+                    @Html.ValidationMessageFor(model => model.IsActive)
+                </div>
+            </div>
+    
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+    
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</body>
+</html>

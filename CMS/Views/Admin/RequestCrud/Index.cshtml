@@ -1,0 +1,133 @@
+﻿@model IEnumerable<CMS.Models.mcms_soap_request>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.requestType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.spId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.spPassword)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.timeStamp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.userID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.userType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.operCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.productID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.isAutoExtend)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.channelID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.extensionInfo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.requestLog)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.responseLog)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.result)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.resultDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.msisdn)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.requestType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.spId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.spPassword)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.timeStamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.userID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.userType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.operCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.productID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.isAutoExtend)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.channelID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.extensionInfo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.requestLog)
+              
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.responseLog)
+              
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.result)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.resultDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.msisdn)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

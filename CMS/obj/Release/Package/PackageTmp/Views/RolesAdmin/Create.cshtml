@@ -1,0 +1,139 @@
+﻿@model CMS.Models.RoleViewModel
+
+ @*CMS.Models.RoleCombainAction*@
+
+@{
+    Layout = null;
+    int row_num =0;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+    <script type="text/javascript">
+        function row_details()
+        {
+            var arr = new Array([]);
+            var i = '@row_num';
+
+            alert(i);
+            arr[0][0] = 'rakib nasir';
+            //alert(arr[0][0]);
+            
+        }
+        
+    </script>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal">
+                <h4>Role.</h4>
+                <hr />
+                @Html.ValidationSummary(true)
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Name, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Name)
+                    </div>
+                </div>
+                  <div class="form-group">
+                  @Html.LabelFor(model => model.Description, new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.Description, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Description)
+                    </div>
+                </div>
+                
+                @*<div id="AllTweets">
+                    @Html.Partial("ActionController", Model)
+                </div>*@
+
+                <div>
+                    <table style="border:1px solid #0094ff">
+
+                        <tr>
+                            <th style="border-bottom-right-radius:2px">
+                                ID
+                            </th>
+                            <th style="border-bottom-right-radius:2px">
+                                Controller Name
+                            </th>
+                            <th style="border-bottom-right-radius:2px">
+                                Action Name
+                            </th>
+                            <th>
+                                IsAccess
+                            </th>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <hr />
+                            </td>
+                        </tr>
+                        @row_num=0;
+                        @foreach (var item in Model.role_details_view)
+                        { 
+                        <tr style="border-bottom:1px solid #808080">
+                                <td >
+                                    <label id="@row_num">@item.Id</label>
+                                   @Html.DisplayFor(modelitem => item.Id, new { id=row_num })
+                                   
+                                </td>
+                                <td >
+                                    <label id="@row_num">@item.ControllerName</label>
+                                    @Html.DisplayFor(modelitem => item.ControllerName, new { id = row_num })
+                                </td>
+                                <td >
+                                    <label id="@row_num">@item.ActionName</label>
+                                   @Html.DisplayFor(modelitem => item.ActionName, new { id = row_num })
+                                </td>
+                            
+                                <td>
+                                    
+                                    @Html.CheckBoxFor(modelitem => item.IsAccess, new { id = row_num })
+                                   
+                                </td>
+                            </tr>
+                             row_num++;
+                           
+                        }
+                       
+                    @*    @foreach (var list in ViewBag.List)
+    {
+        <tr style="border-bottom:1px solid #808080">
+            <td >
+               @list.Id
+            </td>
+            <td >
+                @list.ControllerName
+            </td>
+            <td >
+                @list.ActionName
+            </td>
+            <td>
+                @list.IsAccess
+            </td>
+        </tr>
+    }*@
+                    </table>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="btn btn-default" onclick="row_details();" />
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+
+</body>
+</html>

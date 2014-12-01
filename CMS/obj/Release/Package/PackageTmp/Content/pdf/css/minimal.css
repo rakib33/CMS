@@ -1,0 +1,112 @@
+body {margin: 0; padding: 0; text-align: center; width: 100%;}
+
+.bodywrapper {
+width:98%;
+margin:0 auto;
+
+}
+.pdf-content {
+    border: 1px solid #000000;
+}
+.button {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #A6D7FA), color-stop(1, #67A6FA) );
+	background:-moz-linear-gradient( center top, #A6D7FA 5%, #67A6FA 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#A6D7FA', endColorstr='#67A6FA');
+	background-color:#ededed;
+	-webkit-border-top-left-radius:6px;
+	-moz-border-radius-topleft:6px;
+	border-top-left-radius:6px;
+	-webkit-border-top-right-radius:6px;
+	-moz-border-radius-topright:6px;
+	border-top-right-radius:6px;
+	-webkit-border-bottom-right-radius:6px;
+	-moz-border-radius-bottomright:6px;
+	border-bottom-right-radius:6px;
+	-webkit-border-bottom-left-radius:6px;
+	-moz-border-radius-bottomleft:6px;
+	border-bottom-left-radius:6px;
+	text-indent:0;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#ffffff;
+	font-family:arial;
+	font-weight:bold;
+	font-style:normal;
+	height:25px;
+	line-height:15px;
+	width:30%;
+	text-decoration:none;
+	text-align:center;
+	text-shadow:1px 1px 0px #000000;
+	padding: 0px 5px 0px 5px;
+	margin: 3px 0px 2px 0px;
+}
+.button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #FF0303), color-stop(1, #B30000) );
+	background:-moz-linear-gradient( center top, #FF0303 5%, #B30000 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FF0303', endColorstr='#B30000');
+	background-color:#dfdfdf;
+}.button:active {
+	position:relative;
+	top:1px;
+}
+/* This button was generated using CSSButtonGenerator.com */
+/* CSS classes used by TextLayerBuilder to style the text layer divs */
+
+/* This stuff is important! Otherwise when you select the text, the text in the divs will show up! */
+::selection { background:rgba(0,0,255,0.3); }
+::-moz-selection { background:rgba(0,0,255,0.3); }
+
+.textLayer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: #000;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.textLayer > div {
+    color: transparent;
+    position: absolute;
+    line-height: 1;
+    white-space: pre;
+    cursor: text;
+}
+
+.textLayer .highlight {
+    margin: -1px;
+    padding: 1px;
+
+    background-color: rgba(180, 0, 170, 0.2);
+    border-radius: 4px;
+}
+
+.textLayer .highlight.begin {
+    border-radius: 4px 0px 0px 4px;
+}
+
+.textLayer .highlight.end {
+    border-radius: 0px 4px 4px 0px;
+}
+
+.textLayer .highlight.middle {
+    border-radius: 0px;
+}
+
+.textLayer .highlight.selected {
+    background-color: rgba(0, 100, 0, 0.2);
+}
+
+
+.container { margin: 0; padding: 0; height: 100%; }
+.canvas { display: block; padding: 0; margin: 0 auto;}
+
+.pNum{ padding: 0px 5px 0px 5px; color: #FFFFFF; text-shadow: 1px 1px 0px #000000; font-weight: bold; width: 40%; min-width: 70px; }
+.nav1{ margin: 0 auto; text-align: center; max-width: 700px; background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #A6D7FA), color-stop(1, #67A6FA) ); background:-moz-linear-gradient( center top, #A6D7FA 5%, #67A6FA 100% ); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#A6D7FA', endColorstr='#67A6FA'); border-radius: 0px 0px 5px 5px; }
+@media(max-width:1200px) { .container { margin: 0 5px; } .canvas { width: 100%; height: auto; }}

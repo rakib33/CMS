@@ -1,0 +1,63 @@
+﻿@{
+    //Layout = null;
+    Layout = "~/Views/Shared/_ShareLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Subcribe</title>
+</head>
+<body>
+    <div style="text-align:center">
+
+        <table style="margin:auto">
+            @if (ViewBag.Subscribe != 5 && ViewBag.Subscribe!=null) // if exception not occure display this content
+                          
+            {
+            <tr>
+                <td style="background-color:#fbf6f6;height:70px;width:400px;color:red">
+                    <b>Please subscribe now at BDT 5 for next 30.</b><br />
+                    <b>days to enjoy all the Islamic services. </b><br />
+                    
+                </td>
+            </tr>
+            }
+            <tr>
+                <td style="background-color:#c61313;width:200px;">
+                   
+                    @{
+                        if (ViewBag.Subscribe == 4) //for a new user
+                          {
+                              using (Html.BeginForm("SubscribeUser", "Subscribe", FormMethod.Post))
+                                 {
+                   <input type="submit" value="Subscribe" style="text-decoration: none !important; padding: .3em; color:#fff; background-color:red;width:320px;  "/>
+                                 }
+                          }
+                        else if (ViewBag.Subscribe == 2)  //existing user whose status is unsubscribed
+                        {
+                            
+                            using (Html.BeginForm("ReNewResume", "Subscribe", FormMethod.Post))
+                                 {
+                                 <input type="submit" value="Subscribe" style="text-decoration: none !important; padding: .3em; color:#fff;  "/>
+                            @*<a href="/Subscribe/ReNewResume/" style="text-decoration: none !important; padding: .3em; color:#fff; ">Subscribe</a>*@
+                            }
+                        }
+                        else  //if exception
+                        { 
+                        <div>
+                            <h1>Sorry!!Access Denied!!</h1>
+                        </div>
+                            
+                        }
+}
+                    
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<CMS.Models.Links>
+
+@{    
+
+    if (ViewBag.Header == "android")
+    {
+        Layout = null;
+    }
+    else
+    {
+        Layout = "~/Views/Shared/_ShareLayout.cshtml";
+    }
+}
+
+
+   
+<div style="text-align:center">
+    <h1>@ViewBag.Name</h1>
+
+</div>
+
+    
+
+    <div class="ui-corner-all ui-controlgroup ui-controlgroup-vertical" data-role="controlgroup">
+      
+        
+ @foreach (var item in Model)
+ {
+     //split the item.URL and find Controller,Action,Parameter
+     char[] delimiterChars = { '/', '?' };
+     string[] words = item.URL.Split(delimiterChars);
+    
+
+     
+    @*item.URL =item.URL + item.ID;     
+    <a href="@item.URL" data-role="button" target="_self">@item.Name</a>*@
+
+      @Html.ActionLink(item.Name, words[2], words[1], new { page_id= item.ID }, new { @data_role = "button", @target = "_self" })
+     
+}
+    </div>
+
+

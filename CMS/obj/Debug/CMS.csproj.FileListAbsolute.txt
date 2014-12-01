@@ -1,0 +1,194 @@
+F:\Projects\MCMS\dev\CMS\bin\CMS.dll.config
+F:\Projects\MCMS\dev\CMS\bin\CMS.dll
+F:\Projects\MCMS\dev\CMS\bin\CMS.pdb
+F:\Projects\MCMS\dev\CMS\bin\Antlr3.Runtime.dll
+F:\Projects\MCMS\dev\CMS\bin\EntityFramework.dll
+F:\Projects\MCMS\dev\CMS\bin\EntityFramework.SqlServer.dll
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.AspNet.Identity.Core.dll
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.Owin.dll
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.Owin.Security.Cookies.dll
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.Owin.Security.dll
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.Owin.Security.Facebook.dll
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.Owin.Security.Google.dll
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.Owin.Security.OAuth.dll
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.Owin.Security.Twitter.dll
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.Web.Infrastructure.dll
+F:\Projects\MCMS\dev\CMS\bin\MySql.Data.Entity.EF5.dll
+F:\Projects\MCMS\dev\CMS\bin\MySql.Data.Entity.EF6.dll
+F:\Projects\MCMS\dev\CMS\bin\Newtonsoft.Json.dll
+F:\Projects\MCMS\dev\CMS\bin\Owin.dll
+F:\Projects\MCMS\dev\CMS\bin\RazorEngine.dll
+F:\Projects\MCMS\dev\CMS\bin\System.Net.Http.Formatting.dll
+F:\Projects\MCMS\dev\CMS\bin\System.Web.Helpers.dll
+F:\Projects\MCMS\dev\CMS\bin\System.Web.Http.dll
+F:\Projects\MCMS\dev\CMS\bin\System.Web.Http.WebHost.dll
+F:\Projects\MCMS\dev\CMS\bin\System.Web.Mvc.dll
+F:\Projects\MCMS\dev\CMS\bin\System.Web.Optimization.dll
+F:\Projects\MCMS\dev\CMS\bin\System.Web.Razor.dll
+F:\Projects\MCMS\dev\CMS\bin\System.Web.WebPages.Deployment.dll
+F:\Projects\MCMS\dev\CMS\bin\System.Web.WebPages.dll
+F:\Projects\MCMS\dev\CMS\bin\System.Web.WebPages.Razor.dll
+F:\Projects\MCMS\dev\CMS\bin\WebGrease.dll
+F:\Projects\MCMS\dev\CMS\bin\EntityFramework.xml
+F:\Projects\MCMS\dev\CMS\bin\EntityFramework.SqlServer.xml
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.AspNet.Identity.Core.xml
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.Owin.xml
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.Owin.Security.xml
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.Owin.Security.Cookies.xml
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.Owin.Security.OAuth.xml
+F:\Projects\MCMS\dev\CMS\bin\RazorEngine.pdb
+F:\Projects\MCMS\dev\CMS\bin\RazorEngine.xml
+F:\Projects\MCMS\dev\CMS\bin\System.Web.Helpers.xml
+F:\Projects\MCMS\dev\CMS\bin\System.Web.Mvc.xml
+F:\Projects\MCMS\dev\CMS\bin\System.Web.Optimization.xml
+F:\Projects\MCMS\dev\CMS\bin\System.Web.Razor.xml
+F:\Projects\MCMS\dev\CMS\bin\System.Web.WebPages.xml
+F:\Projects\MCMS\dev\CMS\bin\System.Web.WebPages.Deployment.xml
+F:\Projects\MCMS\dev\CMS\bin\System.Web.WebPages.Razor.xml
+F:\Projects\MCMS\dev\CMS\bin\Newtonsoft.Json.xml
+F:\Projects\MCMS\dev\CMS\bin\Antlr3.Runtime.pdb
+F:\Projects\MCMS\dev\CMS\bin\System.Net.Http.Formatting.xml
+F:\Projects\MCMS\dev\CMS\bin\System.Web.Http.xml
+F:\Projects\MCMS\dev\CMS\bin\System.Web.Http.WebHost.xml
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.Owin.Security.Facebook.xml
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.Owin.Security.Google.xml
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.Owin.Security.Twitter.xml
+F:\Projects\MCMS\dev\CMS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\Projects\MCMS\dev\CMS\obj\Debug\CMS.dll
+F:\Projects\MCMS\dev\CMS\obj\Debug\CMS.pdb
+F:\Projects\MCMS\dev\CMS\obj\Debug\CMS.csprojResolveAssemblyReference.cache
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\CMS.dll.config
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\CMS.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\CMS.pdb
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Antlr3.Runtime.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\EntityFramework.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\EntityFramework.SqlServer.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.AspNet.Identity.Core.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.Owin.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.Owin.Security.Cookies.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.Owin.Security.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.Owin.Security.Facebook.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.Owin.Security.Google.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.Owin.Security.OAuth.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.Owin.Security.Twitter.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.Web.Infrastructure.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Newtonsoft.Json.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Owin.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\RazorEngine.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\System.Net.Http.Formatting.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\System.Web.Helpers.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\System.Web.Http.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\System.Web.Http.WebHost.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\System.Web.Mvc.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\System.Web.Optimization.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\System.Web.Razor.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\System.Web.WebPages.Deployment.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\System.Web.WebPages.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\System.Web.WebPages.Razor.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\WebGrease.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\EntityFramework.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\EntityFramework.SqlServer.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.AspNet.Identity.Core.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.Owin.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.Owin.Security.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.Owin.Security.Cookies.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.Owin.Security.OAuth.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\RazorEngine.pdb
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\RazorEngine.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\System.Web.Helpers.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\System.Web.Mvc.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\System.Web.Optimization.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\System.Web.Razor.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\System.Web.WebPages.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\System.Web.WebPages.Deployment.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\System.Web.WebPages.Razor.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Newtonsoft.Json.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Antlr3.Runtime.pdb
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\System.Net.Http.Formatting.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\System.Web.Http.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\System.Web.Http.WebHost.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.Owin.Security.Facebook.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.Owin.Security.Google.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.Owin.Security.Twitter.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\ArrivoProject\MCMS\MCMS\CMS\obj\Debug\CMS.csprojResolveAssemblyReference.cache
+E:\ArrivoProject\MCMS\MCMS\CMS\obj\Debug\CMS.dll
+E:\ArrivoProject\MCMS\MCMS\CMS\obj\Debug\CMS.pdb
+E:\ArrivoProject\New folder\CMS\bin\CMS.dll.config
+E:\ArrivoProject\New folder\CMS\bin\CMS.dll
+E:\ArrivoProject\New folder\CMS\bin\CMS.pdb
+E:\ArrivoProject\New folder\CMS\bin\Antlr3.Runtime.dll
+E:\ArrivoProject\New folder\CMS\bin\EntityFramework.dll
+E:\ArrivoProject\New folder\CMS\bin\EntityFramework.SqlServer.dll
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.AspNet.Identity.Core.dll
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.Owin.dll
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.Owin.Security.Cookies.dll
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.Owin.Security.dll
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.Owin.Security.Facebook.dll
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.Owin.Security.Google.dll
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.Owin.Security.OAuth.dll
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.Owin.Security.Twitter.dll
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.Web.Infrastructure.dll
+E:\ArrivoProject\New folder\CMS\bin\Newtonsoft.Json.dll
+E:\ArrivoProject\New folder\CMS\bin\Owin.dll
+E:\ArrivoProject\New folder\CMS\bin\RazorEngine.dll
+E:\ArrivoProject\New folder\CMS\bin\System.Net.Http.Formatting.dll
+E:\ArrivoProject\New folder\CMS\bin\System.Web.Helpers.dll
+E:\ArrivoProject\New folder\CMS\bin\System.Web.Http.dll
+E:\ArrivoProject\New folder\CMS\bin\System.Web.Http.WebHost.dll
+E:\ArrivoProject\New folder\CMS\bin\System.Web.Mvc.dll
+E:\ArrivoProject\New folder\CMS\bin\System.Web.Optimization.dll
+E:\ArrivoProject\New folder\CMS\bin\System.Web.Razor.dll
+E:\ArrivoProject\New folder\CMS\bin\System.Web.WebPages.Deployment.dll
+E:\ArrivoProject\New folder\CMS\bin\System.Web.WebPages.dll
+E:\ArrivoProject\New folder\CMS\bin\System.Web.WebPages.Razor.dll
+E:\ArrivoProject\New folder\CMS\bin\WebGrease.dll
+E:\ArrivoProject\New folder\CMS\bin\EntityFramework.xml
+E:\ArrivoProject\New folder\CMS\bin\EntityFramework.SqlServer.xml
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.AspNet.Identity.Core.xml
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.Owin.xml
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.Owin.Security.xml
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.Owin.Security.Cookies.xml
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.Owin.Security.OAuth.xml
+E:\ArrivoProject\New folder\CMS\bin\RazorEngine.pdb
+E:\ArrivoProject\New folder\CMS\bin\RazorEngine.xml
+E:\ArrivoProject\New folder\CMS\bin\System.Web.Helpers.xml
+E:\ArrivoProject\New folder\CMS\bin\System.Web.Mvc.xml
+E:\ArrivoProject\New folder\CMS\bin\System.Web.Optimization.xml
+E:\ArrivoProject\New folder\CMS\bin\System.Web.Razor.xml
+E:\ArrivoProject\New folder\CMS\bin\System.Web.WebPages.xml
+E:\ArrivoProject\New folder\CMS\bin\System.Web.WebPages.Deployment.xml
+E:\ArrivoProject\New folder\CMS\bin\System.Web.WebPages.Razor.xml
+E:\ArrivoProject\New folder\CMS\bin\Newtonsoft.Json.xml
+E:\ArrivoProject\New folder\CMS\bin\Antlr3.Runtime.pdb
+E:\ArrivoProject\New folder\CMS\bin\System.Net.Http.Formatting.xml
+E:\ArrivoProject\New folder\CMS\bin\System.Web.Http.xml
+E:\ArrivoProject\New folder\CMS\bin\System.Web.Http.WebHost.xml
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.Owin.Security.Facebook.xml
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.Owin.Security.Google.xml
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.Owin.Security.Twitter.xml
+E:\ArrivoProject\New folder\CMS\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\ArrivoProject\New folder\CMS\obj\Debug\CMS.csprojResolveAssemblyReference.cache
+E:\ArrivoProject\New folder\CMS\obj\Debug\CMS.dll
+E:\ArrivoProject\New folder\CMS\obj\Debug\CMS.pdb

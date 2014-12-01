@@ -1,0 +1,104 @@
+﻿.Duah1 {
+    /*ID= 5*/
+    color: orange;
+    text-align: center;
+    font-size:x-large;
+    padding:10px 0px 20px 0px;
+}
+
+/*#p {
+    font-family: "Times New Roman";
+    font-size: 20px;
+}*/
+
+.Duatable {
+       /*ID= 6*/
+	width:100%;
+    border: 0px solid green;
+	margin:0 auto;
+}
+
+.Dua_arbi {
+       /*ID= 7*/
+  /*width:627px;*/
+  
+  padding:10px 10px 0px 0px;  /*top right buttom left*/
+  text-align:right;
+  font-size:larger;
+  font-weight:500;
+  
+}
+
+.Dua_BanglaProtiBornona {
+    
+       /*ID= 8*/
+    background-color:#EEE8AA;
+    text-align:left;
+     /*width="627"*/
+}
+
+.Dua_Aonubad {
+
+       /*ID= 9*/
+    color: #444444;
+    font-style:italic;
+}
+
+.Dua_BanglaAonubad {
+
+      /*ID= 10*/
+    background-color:#EEE8AA;   
+    width:627px;
+}
+
+/*#td 
+{
+    width:100%;
+    border: 1px solid green;
+	margin:0 auto;
+}*/ 
+    
+
+
+.Duath
+{
+      /*ID= 11*/
+    width: 100%;
+    border: 1px solid green;
+	margin:0 auto;
+
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+
+.th2
+{
+    background-color: white;
+    color: green;
+    cursor: pointer;
+    border: none;   
+    font-weight:bold;
+    
+}
+
+.Dua_a {
+      /*ID= 12*/
+    /*th a*/
+    text-decoration: none;
+    background-color: green;
+    color: white;
+
+}
+
+#img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+ul li {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
